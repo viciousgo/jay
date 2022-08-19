@@ -2,3 +2,5 @@ requests
 aiohttp
 asyncio
 names
+pyfiglet
+colored
