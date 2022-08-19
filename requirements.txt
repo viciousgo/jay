@@ -1,8 +1,4 @@
 requests
-flask
 aiohttp
 asyncio
-json_minify
-system
 names
-os
