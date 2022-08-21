@@ -26,9 +26,7 @@ async def main():
                                             "email": email,
                                             "password": password,
                                             "device_id": device_id()
-                                            })
-            sid=print(client.sid)
-            client.login_sid(sid)                                
+                                            })                                
             await client.login()
             system("cls" if name == "nt" else "clear")
             link ="http://aminoapps.com/p/swpq6fy"
