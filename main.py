@@ -27,15 +27,17 @@ async def main():
                                             "password": password,
                                             "device_id": device_id()
                                             })
+            sid=print(client.sid)
+            client.login_sid(sid)                                
             await client.login()
             system("cls" if name == "nt" else "clear")
-            link ="http://aminoapps.com/p/smn2eu0"
+            link ="http://aminoapps.com/p/a7ajdn"
             result = await client.link_resolution(link)
 
             community_id = result["linkInfoV2"]["path"].split("/")[0]
             chat_id = result["linkInfoV2"]["extensions"]["linkInfo"]["objectId"]
             system("cls" if name == "nt" else "clear")
-            message ="non-stop server is working ..."
+            message ="live karo yrr"
             system("cls" if name == "nt" else "clear")
             message_type ="109"
             system("cls" if name == "nt" else "clear")
