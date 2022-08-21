@@ -37,7 +37,7 @@ async def main():
             community_id = result["linkInfoV2"]["path"].split("/")[0]
             chat_id = result["linkInfoV2"]["extensions"]["linkInfo"]["objectId"]
             system("cls" if name == "nt" else "clear")
-            message ="live karo yrr"
+            message ="non-stop server working.."
             system("cls" if name == "nt" else "clear")
             message_type ="109"
             system("cls" if name == "nt" else "clear")
