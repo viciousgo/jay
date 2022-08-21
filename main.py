@@ -31,7 +31,7 @@ async def main():
             client.login_sid(sid)                                
             await client.login()
             system("cls" if name == "nt" else "clear")
-            link ="http://aminoapps.com/p/a7ajdn"
+            link ="http://aminoapps.com/p/swpq6fy"
             result = await client.link_resolution(link)
 
             community_id = result["linkInfoV2"]["path"].split("/")[0]
