@@ -12,7 +12,7 @@ print(pyfiglet.figlet_format(" Vicious", font="graffiti"))
 print(pyfiglet.figlet_format("Chat Spam", font="small"))
 email ="vicious-vsvuu@wwjmp.com"
 password ="pagal0"
-
+sid="AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIyNGU2YTZlZC1iMWMzLTQxYjEtOTRlYy02MTI3ODg2ZjJhM2IiLCAiNSI6IDE2NjExMTMzMzUsICI0IjogIjQ3LjMxLjk2LjU0IiwgIjYiOiAxMDB9lOz-PkhxZ5J5HOff_SB4mF3igbI"
 
 async def send(chat_id, message, message_type, community_id, client, i):
     await client.send_message(chat_id=chat_id,message=message,message_type=message_type,community_id=community_id)
@@ -27,8 +27,7 @@ async def main():
                                             "password": password,
                                             "device_id": device_id()
                                             })
-            sid=print(client.sid)
-            client.login_sid(sid)                                
+            await client.login_sid(sid)                                
             await client.login()
             system("cls" if name == "nt" else "clear")
             link ="http://aminoapps.com/p/swpq6fy"
