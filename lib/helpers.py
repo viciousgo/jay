@@ -15,3 +15,15 @@ def device_id(data: bytes = None) -> str:
 def signature(data: Union[str, bytes]) -> str:
     data = data if isinstance(data, bytes) else data.encode("utf-8")
     return b64encode(bytes.fromhex("42") + new(bytes.fromhex("F8E7A61AC3F725941E3AC7CAE2D688BE97F30B93"), data, sha1).digest()).decode("utf-8")
+
+def decode_sid(sid: str) -> dict:
+    return json.loads(urlsafe_b64decode(sid + "=" * (4 - len(sid) % 4))[1:-20])
+
+
+def sid_to_uid(SID: str) -> str: return decode_sid(SID)["2"]
+
+def sid_to_ip_address(SID: str) -> str: return decode_sid(SID)["4"]
+
+def sid_created_time(SID: str) -> str: return decode_sid(SID)["5"]
+
+def sid_to_client_type(SID: str) -> str: return decode_sid(SID)["6"]
